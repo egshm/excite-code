@@ -1,0 +1,30 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-categories
+----------------------------------------*/
+.c-categories {
+  --c_bg: #F3F3F3;
+  --c_text: #626262;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc((6 / 10) * -1em);
+  font-size: var(--fz_10);
+  font-weight: 500;
+}
+
+.c-categories--white {
+  --c_bg: var(--c_white);
+}
+
+.c-categories__item {
+  margin-top: calc((6 / 10) * 1em);
+  margin-right: calc((6 / 10) * 1em);
+  padding: calc((5 / 10) * 1em) calc((15 / 10) * 1em);
+  background-color: var(--c_bg);
+  line-height: calc(16 / 10);
+}
+
+.c-categories__item:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,23 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-flow-text
+----------------------------------------*/
+.c-flow-text {
+  font-size: fwd.make-clamp(84, 150, 375, 768);
+  font-weight: 700;
+  line-height: calc(121 / 84);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c-flow-text__text {
+  animation: flow-text 10s linear infinite;
+  transform: translateX(100%);
+}
+
+@keyframes flow-text {
+  100% {
+   transform: translateX(var(--end_pos, -100%));
+  }
+}

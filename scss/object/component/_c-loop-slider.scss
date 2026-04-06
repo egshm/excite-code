@@ -1,0 +1,39 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-loop-slider
+----------------------------------------*/
+.c-loop-slider {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.c-loop-slider__list {
+  display: flex;
+  align-items: flex-start;
+  animation: loop 30s infinite linear 1s both;
+}
+
+/* スライダーのループアニメーション */
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.c-loop-slider__item {
+  width: fwd.make-clamp(180, 480, 375, 768, "px");
+  margin-right: 2px;
+  margin-left: 2px;
+  aspect-ratio: 180 / 150;
+}
+
+@media (min-width: 768px) {
+  .c-loop-slider__item {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}

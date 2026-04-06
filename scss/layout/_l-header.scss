@@ -1,0 +1,144 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-header
+----------------------------------------*/
+.l-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+}
+
+.l-header__logo {
+  position: relative;
+  width: 115px;
+  z-index: 999;
+}
+
+/* ハンバーガーメニュー */
+.l-header__hamburger {
+  position: relative;
+  margin-left: auto;
+  z-index: 999;
+}
+
+/* スマホ用メニュー */
+.l-header__spmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.l-header__spmenu[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* メインメニューは非表示 */
+.l-header__menu {
+  flex: 0;
+  display: none;
+}
+
+/* Contactボタン */
+.l-header__btn {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .l-header__inner {
+    align-items: start;
+    justify-content: space-between;
+    height: 68px;
+    padding-right: 0;
+    background-color: var(--c_white);
+  }
+
+  .l-header__logo {
+    width: 156px;
+  }
+
+  /* メインメニュー */
+  .l-header__menu {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* スマホ用メニューは非表示 */
+  .l-header__spmenu {
+    display: none;
+  }
+
+  .l-header__hamburger {
+    display: none;
+  }
+
+  /* Contactボタン */
+  .l-header__btn {
+    display: flex;
+    padding: 25px 20px;
+    background-color: var(--c_btn);
+    color: var(--c_white);
+    font-family: var(--ff_roboto);
+    font-weight: 500;
+    text-transform: uppercase;
+    @include fwd.hover-opacity();
+  }
+
+  .l-header__btn-img {
+    width: 22px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .l-header__inner {
+    height: 80px;
+  }
+
+  .l-header__logo {
+    width: 200px;
+  }
+
+  .l-header__btn {
+    padding: 31px 41px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-header__logo {
+    width: 258px;
+  }
+}
+
+/*----------------------------------------
+	ハンバーガーメニューオープン
+----------------------------------------*/
+
+/* ハンバーガーメニューはSPレイアウト専用のため、 */
+/* 影響範囲を広げないためにメディアクエリで切る。 */
+@media (max-width: 767.9px) {
+  .l-header.is-menu-open {
+    position: fixed;
+  }
+
+  .l-header.is-menu-open .l-header__hamburger {
+    --c_line: var(--c_white);
+  }
+}

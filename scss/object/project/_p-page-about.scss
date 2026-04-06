@@ -1,0 +1,53 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  .p-page-about
+----------------------------------------*/
+.p-page-about {
+  overflow-x: hidden;
+}
+
+/*----------------------------------------
+  Philosophy
+----------------------------------------*/
+.p-page-about__philosophy {
+  padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .p-page-about__philosophy {
+    padding-top: 0;
+  }
+}
+
+
+/*----------------------------------------
+  Access
+----------------------------------------*/
+.p-page-about__access {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .p-page-about__access {
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
+}
+
+
+/*----------------------------------------
+  Company Profile
+----------------------------------------*/
+.p-page-about__company {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .p-page-about__company {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
+}

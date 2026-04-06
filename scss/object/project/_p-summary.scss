@@ -1,0 +1,65 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-summary
+----------------------------------------*/
+.p-summary {
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.p-summary__inner {
+  width: calc((335 / 375) * 100%);
+  max-width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-summary__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc((40 / 375) * 100%);
+}
+
+.p-summary__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: fwd.make-clamp(12, 16, 375, 768);
+  line-height: calc(17 / 12);
+  @include fwd.hover-opacity();
+}
+
+.p-summary__arrow {
+  width: 9px;
+}
+
+.p-summary__text-main {
+  margin-top: 60px;
+  font-size: fwd.make-clamp(18, 32, 375, 768);
+  font-weight: 500;
+  line-height: 2;
+}
+
+.p-summary__text-sub {
+  margin-top: 30px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(32 / 14);
+}
+
+@media (min-width: 768px) {
+  .p-summary {
+    padding-top: 58px;
+    padding-bottom: 120px;
+  }
+
+  .p-summary__text-main {
+    margin-top: 100px;
+    font-size: fwd.make-clamp(32, 40, 768, 992);
+  }
+
+  .p-summary__text-sub {
+    margin-top: 40px;
+  }
+}

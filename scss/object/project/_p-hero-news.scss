@@ -1,0 +1,32 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-hero-news
+----------------------------------------*/
+.p-hero-news__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.p-hero-news__title {
+  font-size: fwd.make-clamp(18, 26, 375, 768);
+  font-weight: 500;
+  line-height: calc(30 / 18);
+}
+
+.p-hero-news__date {
+  color: var(--c_date);
+  font-size: var(--fz_12);
+  font-weight: 700;
+  line-height: calc(15 / 10);
+}
+
+.p-hero-news__img-wrap {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .p-hero-news__header {
+    gap: 20px;
+  }
+}

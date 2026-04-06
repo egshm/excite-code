@@ -1,0 +1,36 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-spmenu
+----------------------------------------*/
+.p-spmenu {
+  padding-top: 172px;
+  color: var(--c_white);
+}
+
+.p-spmenu__inner {
+  width: calc((275 / 375) * 100%);
+  height: calc(100vh - 172px);
+  margin-right: auto;
+  margin-left: auto;
+  overflow-y: auto;
+}
+
+.p-spmenu__inner > *:last-child {
+  margin-bottom: 132px;
+}
+
+.p-spmenu__item + .p-spmenu__item {
+  margin-top: 24px;
+}
+
+.p-spmenu__link {
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  font-family: var(--ff_roboto);
+  text-transform: uppercase;
+  @include fwd.hover-opacity();
+}
+
+.p-spmenu__icons {
+  margin-top: 50px;
+}

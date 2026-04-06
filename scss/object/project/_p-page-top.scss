@@ -1,0 +1,87 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-page-top
+----------------------------------------*/
+.p-page-top {
+  overflow-x: hidden;
+}
+
+
+/*----------------------------------------
+  Flow text
+----------------------------------------*/
+.p-page-top__flow-text {
+  margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .p-page-top__flow-text {
+    margin-top: 60px;
+  }
+}
+
+
+/*----------------------------------------
+  About us
+----------------------------------------*/
+.p-page-top__about {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .p-page-top__about {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+
+/*----------------------------------------
+  Service
+----------------------------------------*/
+.p-page-top__service {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .p-page-top__service {
+    padding-top: 60px;
+  }
+}
+
+
+/*----------------------------------------
+  Works
+----------------------------------------*/
+.p-page-top__works {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: var(--c_bg);
+}
+
+@media (min-width: 768px) {
+  .p-page-top__works {
+    padding-top: 126px;
+    padding-bottom: 75px;
+  }
+}
+
+
+/*----------------------------------------
+  News
+----------------------------------------*/
+.p-page-top__post-area {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background-color: var(--c_bg);
+}
+
+@media (min-width: 768px) {
+  .p-page-top__post-area {
+    padding-top: 75px;
+    padding-bottom: 170px;
+  }
+}

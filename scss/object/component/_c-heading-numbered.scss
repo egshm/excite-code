@@ -1,0 +1,34 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-heading-numbered
+----------------------------------------*/
+.c-heading-numbered {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 700;
+}
+
+.c-heading-numbered__number {
+  position: relative;
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(32, 40, 375, 992);
+  line-height: calc(47 / 32);
+}
+
+.c-heading-numbered__number::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: calc((30 / 32) * 1em);
+  margin-left: 13px;
+  background-color: currentColor;
+  transform: translateY(-50%);
+}
+
+.c-heading-numbered__title {
+  font-size: fwd.make-clamp(20, 28, 375, 992);
+  line-height: calc(29 / 20);
+}

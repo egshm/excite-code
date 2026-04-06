@@ -1,0 +1,74 @@
+/*----------------------------------------
+  inview - p-post-area
+----------------------------------------*/
+.js-enabled .p-post-area__item {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.js-enabled .p-post-area__tab--inview {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.js-enabled .p-post-area__title {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+/*----------------------------------------
+  inview - p-posts
+----------------------------------------*/
+.js-enabled .p-posts__item {
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+/*----------------------------------------
+  inview - p-works
+----------------------------------------*/
+.js-enabled .p-works__title {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.js-enabled .p-works__item {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+/*----------------------------------------
+  inview - p-fv-sub
+----------------------------------------*/
+.js-enabled .p-fv-sub__img-wrap {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.js-enabled .p-fv-sub__title {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+/*----------------------------------------
+  inview - p-service
+----------------------------------------*/
+.js-enabled .p-service__title {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+@media (min-width: 768px) {
+  .js-enabled .p-service__title {
+    transform: translateX(10%);
+  }
+}

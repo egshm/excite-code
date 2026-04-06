@@ -1,0 +1,35 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-menu
+----------------------------------------*/
+.c-menu {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.c-menu__list {
+  display: flex;
+}
+
+.c-menu__item {
+  margin-right: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.c-menu__link {
+  font-family: var(--ff_roboto);
+  @include fwd.hover-opacity();
+}
+
+@media (min-width: 1024px) {
+  .c-menu {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .c-menu__item {
+    margin-right: 49px;
+  }
+}

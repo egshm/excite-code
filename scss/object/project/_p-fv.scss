@@ -1,0 +1,90 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-fv
+----------------------------------------*/
+.p-fv {
+  position: relative;
+}
+
+// スマホでファーストビュー画像をタッチしても下方向へスクロールできない問題を回避
+// 透明な矩形をファーストビュー画像の上に配置することでタッチ操作を可能にする。
+.p-fv::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.p-fv__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  width: calc((355 / 375) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-fv__copy-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: calc((10 / 355) * 100%);
+  font-size: fwd.make-clamp(34, 60, 375, 768);
+  font-weight: 700;
+  line-height: calc(49 / 34);
+}
+
+.p-fv__slider {
+  height: 100vh;
+  touch-action: pan-y;
+  overflow: hidden;
+}
+
+.p-fv__slide {
+  height: 100%;
+}
+
+.p-fv__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-fv__inner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: calc((1280 / 1440) * 100%);
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-fv__content {
+    width: calc((165 / 1280) * 100%);
+    margin-top: 195px;
+    margin-left: calc((81 / 1280) * 100%);
+  }
+
+  .p-fv__copy-wrapper {
+    gap: 14px;
+    margin: 0;
+    font-size: fwd.make-clamp(45, 60, 768, 1440);
+    line-height: 1;
+    writing-mode: vertical-rl;
+  }
+
+  .p-fv__slider {
+    flex-shrink: 0;
+    width: calc((1034 / 1280) * 100%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-fv__copy-wrapper {
+    gap: calc((45 / 60) * 1em);
+  }
+}

@@ -1,0 +1,104 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  .p-page-contact
+----------------------------------------*/
+.p-page-contact {
+  .wpcf7-spinner {
+    display: none;
+  }
+}
+
+.p-page-contact__inner {
+  width: calc((335 / 375) * 100%);
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+}
+
+.p-page-contact__text {
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(32 / 14);
+}
+
+.p-page-contact__lead-en {
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(24, 40, 375, 768);
+  font-weight: 700;
+  line-height: calc(36 / 24);
+  text-transform: uppercase;
+}
+
+.p-page-contact__lead + .p-page-contact__text {
+  margin-top: 30px;
+}
+
+.p-page-contact__lead {
+  margin-top: 10px;
+  font-size: fwd.make-clamp(14, 18, 375, 768);
+  font-weight: 500;
+  line-height: calc(20 / 14);
+}
+
+.p-page-contact__content {
+  margin-top: 40px;
+}
+
+.p-page-contact__btn-wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.p-page-contact__btn-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.p-page-contact__table {
+  /* ヘッダー（th）幅 */
+  --w_header: calc((192 / 640) * 100%);
+  /* テキスト（td）幅 */
+  --w_text: calc((448 / 640) * 100%);
+  /* ボーダー幅 */
+  --w_border: 0px;
+  /* ヘッダー・テキスト間ギャップ（SP時） */
+  --gap_sp: 10px;
+  /* 行間 */
+  --p_row: 15px;
+  /* ヘッダーのフォントサイズ */
+  --fz_header: var(--fz_15);
+  /* テキストのフォントサイズ */
+  --fz_text: var(--fz_14);
+}
+
+.p-page-contact__confirm-area {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .p-page-contact__inner {
+    width: 640px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+
+  .p-page-contact__content {
+    margin-top: 100px;
+  }
+
+  .p-page-contact__lead {
+    margin-top: 20px;
+  }
+
+  .p-page-contact__lead + .p-page-contact__text {
+    margin-top: 40px;
+  }
+
+  .p-page-contact__table {
+    --p_row: 20px;
+  }
+}

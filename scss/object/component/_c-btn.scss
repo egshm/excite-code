@@ -1,0 +1,57 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-btn
+----------------------------------------*/
+.c-btn {
+  --c_text: #001E63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  color: var(--c_text);
+  text-transform: uppercase;
+  font-size: var(--fz_14);
+  line-height: calc(20 / 14);
+  @include fwd.underline-anim(".c-btn__text");
+}
+
+.c-btn--border {
+  padding: calc((12 / 14) * 1em) calc((24 / 14) * 1em);
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.c-btn--img-left:focus-visible .c-btn__img {
+  transform: translateX(-5px);
+}
+
+.c-btn:focus-visible {
+  padding: calc((12 / 14) * 1em) calc((24 / 14) * 1em);
+  border: 2px solid var(--c_focus) !important;
+  border-radius: 4px; 
+}
+
+.c-btn:focus-visible .c-btn__img {
+  transform: translateX(5px);
+}
+
+.c-btn__img {
+  width: 5px;
+  transition: transform 0.3s;
+}
+
+.c-btn__text {
+  font-family: var(--ff_roboto);
+}
+
+@media (any-hover: hover) { /* ホバー可能時 */
+  .c-btn:hover .c-btn__img {
+    transform: translateX(5px);
+  }
+
+  .c-btn--img-left:hover .c-btn__img {
+    transform: translateX(-5px);
+  }
+}

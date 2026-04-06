@@ -1,0 +1,77 @@
+///
+/// @mixin hover-opacity
+/// 
+/// ホバー可能な要素に、透過のホバーエフェクトを適用します。
+/// 
+/// Note:
+/// - focus-visible の時も適用します。
+/// 
+/// @param {Number} $opacity - 不透明度（0~1）
+/// @param {Time} $transition-time - トランジション時間
+/// 
+@mixin hover-opacity($opacity: 0.7, $transition-time: 0.3s) {
+
+  transition: opacity $transition-time;
+
+  // フォーカス時
+  &:focus-visible {
+    opacity: $opacity;
+  }
+
+  // ホバー可能時
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+}
+
+
+///
+/// @mixin underline-anim
+/// 
+/// 呼び出し元が hover / focus-visible 状態のときに、
+/// ターゲット要素に下線アニメーションを適用します。
+/// 
+/// Note:
+/// - 下線の色は呼び出し元の color を継承します。
+/// 
+/// @param {String} $target
+///   - ターゲット要素
+/// 
+/// @param {Length} $line-width
+///   - 下線の太さ
+/// 
+/// @param {String} $combinator
+///   - 呼び出し元とターゲットの間の結合子（" ", ">", "+", "~"）
+/// 
+//// @param {Time} $transition-time
+///   - 下線アニメーションのトランジション継続時間
+/// 
+@mixin underline-anim(
+  $target,
+  $line-width: 1px,
+  $combinator: " ",
+  $transition-time: 0.3s
+) {
+
+  &#{$combinator}#{$target} {
+    display: inline;
+    background-image: linear-gradient(90deg, currentColor, currentColor);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 0 $line-width;
+    transition: background-size $transition-time;
+  }
+
+  &:focus-visible#{$combinator}#{$target} {
+    background-size: 100% $line-width;
+  }
+
+  // ホバー可能時
+  @media (any-hover: hover) {
+    &:hover#{$combinator}#{$target} {
+      background-size: 100% $line-width;
+    }
+  }
+}

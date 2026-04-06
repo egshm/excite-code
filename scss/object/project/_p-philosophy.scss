@@ -1,0 +1,116 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-philosophy
+----------------------------------------*/
+.p-philosophy {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-philosophy__text {
+  margin-top: 30px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(32 / 14);
+}
+
+.p-philosophy__ceo {
+  margin-top: 30px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(20 / 14);
+  text-align: right;
+}
+
+.p-philosophy__img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+@media (max-width: 767.9px) {
+  .p-philosophy {
+    background-color: var(--c_bg);
+  }
+
+  .p-philosophy__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: calc((335 / 375) * 100%);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-philosophy__img-wrap {
+    max-height: 460px;
+    aspect-ratio: 335 / 306;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-philosophy__inner {
+    display: flex;
+    align-items: stretch;
+    width: calc((355 / 375) * 100%);
+    margin-right: auto;
+  }
+
+  .p-philosophy__body {
+    width: calc((800 / 1270) * 100%);
+    padding: 30px;
+    background-color: var(--c_bg);
+  }
+
+  .p-philosophy__img-wrap {
+    width: calc((470 / 1270) * 100%);
+    max-height: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .p-philosophy__body {
+    padding: 70px 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-philosophy__inner {
+    width: calc((1270 / 1440) * 100%);
+    max-width: 1270px;
+  }
+
+  .p-philosophy__body {
+    width: calc((910 / 1270) * 100%);
+    padding-left: 170px;
+  }
+
+  .p-philosophy__img-wrap {
+    width: calc((360 / 1270) * 100%);
+  }
+
+  .p-philosophy__text {
+    margin-top: 60px;
+  }
+
+  .p-philosophy__ceo {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .p-philosophy__body {
+    position: relative;
+  }
+
+  .p-philosophy__body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: calc(50vw - 50%);
+    height: 100%;
+    background-color: var(--c_bg);
+  }
+}

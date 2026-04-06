@@ -1,0 +1,16 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  Works
+----------------------------------------*/
+.p-page-works__post-area {
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .p-page-works__post-area {
+    padding-top: 58px;
+    padding-bottom: 120px;
+  }
+}

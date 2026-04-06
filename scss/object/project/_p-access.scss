@@ -1,0 +1,69 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-access
+----------------------------------------*/
+.p-access {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-access__inner {
+  width: calc((355 / 375) * 100%);
+  margin-left: auto;
+}
+
+.p-access__text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(20 / 14);
+}
+
+.p-access__map-wrap {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  aspect-ratio: 355 / 400;
+}
+
+.p-access__map {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-access__text-wrap {
+    margin-top: 8px;
+  }
+
+  .p-access__map-wrap {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-access__inner {
+    width: calc((1270 / 1440) * 100%);
+    max-width: 1270px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .p-access__map-wrap {
+    position: relative;
+  }
+
+  .p-access__map-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: calc(50vw - 50%);
+    height: 100%;
+    background-color: var(--c_bg);
+  }
+}

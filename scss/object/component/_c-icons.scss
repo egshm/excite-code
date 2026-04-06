@@ -1,0 +1,18 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-icons
+----------------------------------------*/
+.c-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.c-icons__link {
+  @include fwd.hover-opacity();
+}
+
+.c-icons__img {
+  width: 22px;
+}

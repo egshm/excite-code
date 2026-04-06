@@ -1,0 +1,81 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-post-news
+----------------------------------------*/
+.p-post-news {
+
+  * + h2,
+  * + h3,
+  * + p,
+  * + ul {
+    margin-top: 40px;
+  }
+
+  h2 {
+    padding: calc((8 / 16) * 1em) calc((11 / 16) * 1em);
+    background-color: var(--c_bg);
+    border-left: 3px solid currentColor;
+    font-size: fwd.make-clamp(16, 22, 375, 768);
+    font-weight: 500;
+    line-height: calc(24 / 16);
+  }
+
+  h3 {
+    position: relative;
+    padding: 0 calc((13 / 18) * 1em) calc((8 / 18) * 1em);
+    font-size: fwd.make-clamp(14, 18, 375, 768);
+    font-weight: 500;
+    line-height: calc(26 / 18);
+  }
+
+  h3::before,
+  h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+  }
+
+  h3::before {
+    left: 0;
+    width: calc((125 / 335) * 100%);
+    background-color: currentColor;
+  }
+
+  h3::after {
+    right: 0;
+    width: calc((210 / 335) * 100%);
+    background-color: var(--c_border);
+  }
+
+  p {
+    font-size: fwd.make-clamp(14, 16, 375, 768);
+    line-height: calc(32 / 14);
+  }
+
+  p + p,
+  br + p {
+    margin-top: 0;
+  }
+
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    font-size: fwd.make-clamp(14, 16, 375, 768);
+    line-height: calc(32 / 14);
+  }
+
+  li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}

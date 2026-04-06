@@ -1,0 +1,17 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-page-service
+----------------------------------------*/
+.p-page-service__item {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-bottom: 78px;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .p-page-service__item {
+    margin-bottom: 150px;
+  }
+}

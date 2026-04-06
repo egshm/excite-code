@@ -1,0 +1,56 @@
+:root {
+  // カラー
+  --c_base: #000000;
+  --c_bg: #F8F8F8;
+  --c_border: #E2E2E2;
+  --c_black: #000000;
+  --c_btn: #011950;
+  --c_date: #A9A9A9;
+  --c_focus: #3498db;
+  --c_gray: #555555;
+  --c_placeholder: #A9A9A9;
+  --c_require: #E20000; 
+  --c_shadow: rgba(24, 40, 72, 0.5);
+  --c_spmenu: #001135;
+  --c_white: #FFFFFF;
+  --c_mask: rgba(0, 0, 0, 0.5);
+
+  // フォント
+  --ff_default:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  --ff_roboto:
+    "Roboto",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+  --ff_oswald:
+    "Oswald",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+
+  // フォントサイズ
+  --fz_10: calc((10 / 16) * 1rem);
+  --fz_11: calc((11 / 16) * 1rem);
+  --fz_12: calc((12 / 16) * 1rem);
+  --fz_14: calc((14 / 16) * 1rem);
+  --fz_15: calc((15 / 16) * 1rem);
+  --fz_16: calc((16 / 16) * 1rem);
+  --fz_18: calc((18 / 16) * 1rem);
+  --fz_20: calc((20 / 16) * 1rem);
+  --fz_24: calc((24 / 16) * 1rem);
+  --fz_26: calc((26 / 16) * 1rem);
+  --fz_28: calc((28 / 16) * 1rem);
+  --fz_32: calc((32 / 16) * 1rem);
+  --fz_34: calc((34 / 16) * 1rem);
+  --fz_38: calc((38 / 16) * 1rem);
+  --fz_48: calc((48 / 16) * 1rem);
+  --fz_56: calc((56 / 16) * 1rem);
+}

@@ -1,0 +1,26 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-overlay
+----------------------------------------*/
+.c-overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: var(--c_spmenu);
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translate(50%, 50%);
+  transition: width 0.3s, height 0.3s;
+  z-index: 997;
+}
+
+.c-overlay.is-active {
+  width: 500vw;
+  height: 500vh;
+}
+
+

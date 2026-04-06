@@ -1,0 +1,52 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-about
+----------------------------------------*/
+.p-about__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.p-about__title {
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(16, 20, 375, 768);
+  font-weight: 700;
+  line-height: calc(40 / 16);
+}
+
+.p-about__text {
+  margin-top: 27px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(32 / 14);
+}
+
+.p-about__btn {
+  justify-content: right; /* 右寄せ */
+  margin-top: 40px;
+}
+
+.p-about__img {
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+
+@media (min-width: 768px) {
+  .p-about__inner {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: calc((60 / 1100) * 100%);
+  }
+
+  .p-about__body {
+    width: calc((490 / 1100) * 100%);
+  }
+
+  .p-about__img-wrap {
+    width: calc((550 / 1100) * 100%);
+  }
+}

@@ -1,0 +1,122 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-btn-contact
+----------------------------------------*/
+.c-btn-contact {
+  position: relative;
+  width: 150px;
+  max-width: 100%;
+  border: 2px solid var(--c_btn);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.c-btn-contact > p {
+  font-size: 0;
+}
+
+.c-btn-contact--lg {
+  width: 275px;
+}
+
+.c-btn-contact--colored {
+  background-color: var(--c_btn);
+
+  .c-btn-contact__btn,
+  .c-btn-contact__img {
+    color: var(--c_white);
+  }
+}
+
+.c-btn-contact--img-left {
+  .c-btn-contact__img {
+    left: 40px;
+    right: auto;
+  }
+}
+
+.c-btn-contact--confirm {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  .c-btn-contact__btn,
+  .c-btn-contact__img {
+    color: var(--c_gray);
+    transition: color 0.3s, transform 0.3s;
+  }
+}
+
+.c-btn-contact--confirm.is-active {
+  pointer-events: auto;
+
+  .c-btn-contact__btn,
+  .c-btn-contact__img {
+    color: var(--c_white);
+  }
+}
+
+.c-btn-contact:focus-visible .c-btn-contact__img {
+  transform: translate(5px, -50%);
+}
+
+.c-btn-contact--img-left:focus-visible .c-btn-contact__img {
+  transform: translate(-5px, -50%);
+}
+
+.c-btn-contact__btn {
+  width: 100%;
+  padding: calc((12 / 14) * 1em);
+  color: var(--c_btn);
+  cursor: pointer;
+  font-size: var(--fz_14);
+  font-weight: 500;
+  line-height: calc(20 / 14);
+  text-transform: uppercase;
+}
+
+.c-btn-contact__img {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  width: 5px;
+  color: var(--c_btn);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+@media (any-hover: hover) {
+  .c-btn-contact:hover .c-btn-contact__img {
+    transform: translate(5px, -50%);
+  }
+
+  .c-btn-contact--img-left:hover .c-btn-contact__img {
+    transform: translate(-5px, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .c-btn-contact {
+    width: 280px;
+  }
+
+  .c-btn-contact--lg {
+    width: 460px;
+
+    &.c-btn-contact--img-left .c-btn-contact__img {
+      left: 60px;
+    }
+
+    .c-btn-contact__img {
+      right: 60px;
+    }
+  }
+
+  .c-btn-contact__btn {
+    padding: calc((20 / 18) * 1em);
+    font-size: var(--fz_18);
+  }
+}

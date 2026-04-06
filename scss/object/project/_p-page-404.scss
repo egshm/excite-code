@@ -1,0 +1,132 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-404
+----------------------------------------*/
+.p-page-404 {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.p-page-404__hero {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-page-404__hero-inner {
+  position: relative;
+  width: calc((365 / 375) * 100%);
+  margin-left: auto;
+}
+
+.p-page-404__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-page-404__img-wrap {
+  height: 243px;
+}
+
+.p-page-404__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-page-404__title {
+  color: var(--c_white);
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(35, 70, 375, 768);
+  font-weight: 700;
+  line-height: calc(52 / 35);
+  white-space: nowrap;
+}
+
+.p-page-404__btn {
+  width: 140px;
+  font-weight: 500;
+}
+
+.p-page-404__wrap-sp {
+  width: calc((335 / 375) * 100%);
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-page-404__wrap-sp > .p-page-404__text {
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(32 / 14);
+}
+
+.p-page-404__wrap-sp > .p-page-404__btn {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-page-404__wrap-pc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-page-404 {
+    padding-top: 169px;
+    padding-bottom: 120px;
+  }
+
+  .p-page-404__img-wrap {
+    height: 514px;
+  }
+
+  .p-page-404__wrap-sp {
+    display: none;
+  }
+
+  .p-page-404__wrap-pc {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .p-page-404__wrap-pc > .p-page-404__text {
+    color: var(--c_white);
+    font-weight: 500;
+    line-height: calc(38 / 16);
+  }
+
+  .p-page-404__wrap-pc > .p-page-404__btn {
+    margin-top: 20px;
+    color: var(--c_white);
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-page-404 {
+    padding-top: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-page-404 {
+    padding-top: 330px;
+  }
+
+  .p-page-404__hero-inner {
+    width: calc((1270 / 1440) * 100%);
+    max-width: 1270px;
+  }
+
+  .p-page-404__body {
+    left: min(calc((550 / 1270) * 100%), 550px);
+    transform: translateY(-50%);
+  }
+
+
+  .p-page-404__img-wrap {
+    margin-right: calc(50% - 50vw);
+  }
+}

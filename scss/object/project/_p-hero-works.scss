@@ -1,0 +1,39 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-hero-works
+----------------------------------------*/
+.p-hero-works__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.p-hero-works__title {
+  font-size: fwd.make-clamp(18, 26, 375, 768);
+  font-weight: 500;
+  line-height: calc(30 / 18);
+}
+
+.p-hero-works__date {
+  color: var(--c_date);
+  font-size: var(--fz_12);
+  font-weight: 700;
+  line-height: calc(15 / 10);
+}
+
+.p-hero-works__img-wrap {
+  margin-top: 40px;
+  aspect-ratio: 840 / 471;
+}
+
+.p-hero-works__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-hero-works__header {
+    gap: 20px;
+  }
+}

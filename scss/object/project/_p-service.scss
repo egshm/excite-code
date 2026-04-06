@@ -1,0 +1,52 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-service
+----------------------------------------*/
+.p-service__title {
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(38, 70, 375, 768);
+  font-weight: 700;
+  line-height: calc(56 / 38);
+}
+
+.p-service__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 60px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .p-service__title {
+    text-align: right;
+  }
+
+  .p-service__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: calc((40 / 1100) * 100%);
+    row-gap: 0;
+    margin-top: 60px;
+    margin-bottom: -60px;
+  }
+
+  .p-service__item {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    margin-bottom: 60px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .p-service__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .p-service__item {
+    max-width: 335px;
+  }
+}

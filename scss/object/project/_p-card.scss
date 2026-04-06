@@ -1,0 +1,66 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-card
+----------------------------------------*/
+.p-card {
+  position: relative;
+}
+
+.p-card__title {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  color: var(--c_white);
+  font-weight: 700;
+}
+
+.p-card__title-main {
+  font-size: fwd.make-clamp(26, 32, 375, 768);
+}
+
+.p-card__title-sub {
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(16, 24, 375, 768);
+}
+
+.p-card__text {
+  margin-top: 30px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  line-height: calc(32 / 14);
+}
+
+.p-card__btn {
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.p-card__img {
+  max-height: 292px;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 768px) {
+  .p-card__title-main {
+    font-size: fwd.make-clamp(26, 32, 768, 1200);
+  }
+
+  .p-card__title-sub {
+    font-size: fwd.make-clamp(16, 24, 768, 1200);
+  }
+}
+
+@media (min-width: 1200px) {
+  .p-card__title-main {
+    font-size: var(--fz_26);
+  }
+
+  .p-card__title-sub {
+    font-size: var(--fz_16);
+  }
+}

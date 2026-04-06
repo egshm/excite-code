@@ -1,0 +1,79 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-table
+----------------------------------------*/
+.c-table {
+  /* ヘッダー（th）幅 */
+  --w_header: calc((170 / 1100) * 100%);
+  /* テキスト（td）幅 */
+  --w_text: calc((930 / 1100) * 100%);
+  /* ボーダー幅 */
+  --w_border: 1px;
+  /* ヘッダー・テキスト間ギャップ（SP時） */
+  --gap_sp: calc((16 / 14) * 1em);
+  /* 行間 */
+  --p_row: 20px;
+  /* ヘッダーのフォントサイズ */
+  --fz_header: #{fwd.make-clamp(14, 16, 375, 768)};
+  /* テキストのフォントサイズ */
+  --fz_text: #{fwd.make-clamp(14, 16, 375, 768)};
+}
+
+.c-table__inner {
+  width: 100%;
+}
+
+.c-table__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap_sp);
+  padding-top: var(--p_row);
+  padding-bottom: var(--p_row);
+  border-bottom: var(--w_border) solid var(--c_border);
+  line-height: calc(20 / 14);
+}
+
+.c-table__row:first-child {
+  padding-top: 0;
+}
+
+.c-table__header {
+  padding-right: 1em;
+  font-size: var(--fz_header);
+  font-weight: 500;
+  text-align: left;
+}
+
+.c-table__text {
+  font-size: var(--fz_text);
+}
+
+.c-table__list {
+  display: flex;
+  flex-direction: column;
+  gap: calc((10 / 14) * 1em);
+}
+
+.c-table__require {
+  color: var(--c_require);
+}
+
+@media (min-width: 768px) {
+  .c-table {
+    --p_row: 40px;
+  }
+
+  .c-table__row {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .c-table__header {
+    width: var(--w_header);
+  }
+
+  .c-table__text {
+    width: var(--w_text);
+  }
+}

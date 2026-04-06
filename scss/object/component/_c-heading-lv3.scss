@@ -1,0 +1,20 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-heading-lv3
+----------------------------------------*/
+.c-heading-lv3 {
+  display: flex;
+  align-items: flex-end;
+  gap: 13px;
+  font-weight: 500;
+}
+
+.c-heading-lv3__main {
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(18, 22, 375, 768);
+}
+
+.c-heading-lv3__sub {
+  font-size: fwd.make-clamp(10, 12, 375, 768);
+}

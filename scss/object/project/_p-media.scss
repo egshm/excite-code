@@ -1,0 +1,150 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-media
+----------------------------------------*/
+.p-media {
+  --c_text: #626262;
+}
+
+.p-media__link {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include fwd.underline-anim(".p-media__title > span");
+}
+
+.p-media__img-wrap {
+  width: calc((120 / 295) * 100%);
+  aspect-ratio: 120 / 95;
+}
+
+.p-media__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-media__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: calc((157 / 295) * 100%);
+}
+
+.p-media__title {
+  width: fit-content;
+  font-size: fwd.make-clamp(14, 24, 375, 992);
+  font-weight: 500;
+  line-height: 2;
+}
+
+.p-media__text {
+  display: none;
+}
+
+.p-media__date {
+  color: var(--c_date);
+  font-size: fwd.make-clamp(10, 12, 375, 768);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .p-media__link {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .p-media__img-wrap {
+    width: calc((290 / 1050) * 100%);
+  }
+
+  .p-media__body {
+    gap: 30px;
+    width: calc((710 / 1050) * 100%);
+  }
+
+  .p-media__text {
+    display: block;
+    color: var(--c_text);
+    line-height: calc(38 / 16);
+  }
+}
+
+
+/*----------------------------------------
+  p-media--aside（お知らせ詳細ページ専用）
+----------------------------------------*/
+.p-media--aside {
+
+  .p-media__title {
+    font-size: fwd.make-clamp(12, 16, 375, 768);
+    font-weight: 400;
+  }
+
+  .p-media__link {
+    align-items: flex-start;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .p-media__img-wrap {
+    aspect-ratio: 1 / 1;
+  }
+
+  .p-media__date {
+    font-size: fwd.make-clamp(10, 14, 375, 768);
+  }
+}
+
+@media (min-width: 768px) {
+  .p-media--aside {
+    .p-media__title {
+      font-size: var(--fz_12);
+    }
+
+    .p-media__date {
+      font-size: var(--fz_10);
+    }
+  }
+}
+
+
+/*----------------------------------------
+  p-media--works（実績紹介ページ専用）
+----------------------------------------*/
+.p-media--works {
+
+  &:first-child .p-media__link {
+    padding-top: 0;
+  }
+
+  .p-media__link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .p-media__title {
+    font-size: fwd.make-clamp(14, 18, 375, 768);
+  }
+
+  .p-media__img-wrap {
+    aspect-ratio: 120 / 90;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-media--works {
+
+    .p-media__link {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .p-media__img-wrap {
+      aspect-ratio: 290 / 230;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  c-heading-lv2
+----------------------------------------*/
+.c-heading-lv2 {
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: 700;
+}
+
+.c-heading-lv2__main {
+  position: relative;
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(26, 40, 375, 768);
+  line-height: calc(39 / 26);
+}
+
+.c-heading-lv2__main::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  margin-left: 10px;
+  background-color: currentColor;
+  transform: translateY(-50%);
+}
+
+.c-heading-lv2__sub {
+  font-size: fwd.make-clamp(12, 16, 375, 768);
+  line-height: calc(17 / 12);
+}
+
+@media (min-width: 768px) {
+  .c-heading-lv2__main::after {
+    margin-left: 20px;
+  }
+}

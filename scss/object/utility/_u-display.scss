@@ -1,0 +1,22 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	Utility: Display
+----------------------------------------*/
+.u-sp-only {
+  display: block !important;
+}
+
+.u-pc-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .u-sp-only {
+    display: none !important;
+  }
+
+  .u-pc-only {
+    display: block !important;
+  }
+}

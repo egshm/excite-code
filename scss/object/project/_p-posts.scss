@@ -1,0 +1,56 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-posts
+----------------------------------------*/
+.p-posts__item {
+  border-bottom: 1px solid var(--c_border);
+}
+
+.p-posts__item:first-child {
+  border-top: 1px solid var(--c_border);
+}
+
+.p-posts__link {
+  display: block;
+  padding-top: 26px;
+  padding-bottom: 20px;
+  @include fwd.underline-anim(".p-posts__title");
+}
+
+.p-posts__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.p-posts__date {
+  color: var(--c_date);
+  font-size: fwd.make-clamp(10, 12, 375, 768);
+  font-weight: 700;
+}
+
+.p-posts__body {
+  margin-top: 20px;
+}
+
+.p-posts__title {
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  font-weight: 500;
+  line-height: 2;
+}
+
+@media (min-width: 992px) {
+  .p-posts__item:first-child {
+    border-top: none;
+  }
+
+  .p-posts__item:first-child .p-posts__link {
+    padding-top: 0;
+  }
+
+  .p-posts__link {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

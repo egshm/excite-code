@@ -1,0 +1,58 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-works
+----------------------------------------*/
+.p-works__title {
+  font-family: var(--ff_oswald);
+  font-size: fwd.make-clamp(38, 70, 375, 768);
+  font-weight: 700;
+  line-height: calc(56 / 38);
+}
+
+.p-works__content {
+  margin-top: 20px;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  padding-bottom: 80px;
+  background-color: var(--c_white);
+}
+
+.p-works__list {
+  width: calc((295 / 375) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-works__item {
+  border-bottom: 1px solid var(--c_border);
+}
+
+.p-works__btn-wrap {
+  width: calc((295 / 375) * 100%);
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-works__btn {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .p-works__content {
+    margin-top: 40px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-bottom: 60px;
+  }
+
+  .p-works__list,
+  .p-works__btn-wrap {
+    width: calc((1050 / 1100) * 100%);
+  }
+
+  .p-works__btn-wrap {
+    margin-top: 53px;
+  }
+}

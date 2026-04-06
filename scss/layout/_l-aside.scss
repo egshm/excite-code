@@ -1,0 +1,47 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-aside
+----------------------------------------*/
+.l-aside__title {
+  --c_bg: #001135;
+  padding: 15px 18px;
+  background-color: var(--c_bg);
+  color: var(--c_white);
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  font-weight: 500;
+  line-height: calc(20 / 14);
+}
+
+.l-aside__list {
+  width: calc((310 / 335) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.l-aside__list + .l-aside__title {
+  margin-top: 40px;
+}
+
+.l-aside__item {
+  border-bottom: 1px solid var(--c_border);
+}
+
+.l-aside__item:last-child {
+  border-bottom: none;
+}
+
+.l-aside__link {
+  display: block;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: fwd.make-clamp(14, 16, 375, 768);
+  @include fwd.underline-anim(".l-aside__text");
+}
+
+@media (min-width: 768px) {
+  .l-aside__title,
+  .l-aside__link {
+    font-size: var(--fz_14);
+  }
+}
