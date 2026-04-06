@@ -18,11 +18,11 @@
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv_sp.webp")); ?>"
                 type="image/webp"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv_sp.jpg")); ?>"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri('images/fv.webp')); ?>"
@@ -48,11 +48,11 @@
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv-02_sp.webp")); ?>"
                 type="image/webp"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv-02_sp.jpg")); ?>"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri('images/fv-02.webp')); ?>"
@@ -76,11 +76,11 @@
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv-03_sp.webp")); ?>"
                 type="image/webp"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv-03_sp.jpg")); ?>"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri('images/fv-03.webp')); ?>"
@@ -104,11 +104,11 @@
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv-04_sp.webp")); ?>"
                 type="image/webp"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri("images/fv-04_sp.jpg")); ?>"
-                media="(max-width: 767.9px)"
+                media="(max-width: 767.98px)"
               >
               <source
                 srcset="<?php echo esc_url(get_theme_file_uri('images/fv-04.webp')); ?>"

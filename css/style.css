@@ -2837,7 +2837,7 @@ span {
   object-position: top;
 }
 
-@media (max-width: 767.9px) {
+@media (max-width: 767.98px) {
   .p-philosophy {
     background-color: var(--c_bg);
   }
@@ -3317,7 +3317,7 @@ span {
 ----------------------------------------*/
 /* ハンバーガーメニューはSPレイアウト専用のため、 */
 /* 影響範囲を広げないためにメディアクエリで切る。 */
-@media (max-width: 767.9px) {
+@media (max-width: 767.98px) {
   .l-header.is-menu-open {
     position: fixed;
   }

@@ -65,11 +65,11 @@ if (is_page('about')) {
         <source
           srcset="<?php echo esc_url(get_theme_file_uri($img_webp_sp)); ?>"
           type="image/webp"
-          media="(max-width: 767.9px)"
+          media="(max-width: 767.98px)"
         >
         <source
           srcset="<?php echo esc_url(get_theme_file_uri($img_sp)); ?>"
-          media="(max-width: 767.9px)"
+          media="(max-width: 767.98px)"
         >
         <source
           srcset="<?php echo esc_url(get_theme_file_uri($img_webp_pc)); ?>"

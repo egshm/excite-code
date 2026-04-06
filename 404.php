@@ -24,11 +24,11 @@
           <source
             srcset="<?php echo esc_url(get_theme_file_uri("images/fv-404_sp.webp")); ?>"
             type="image/webp"
-            media="(max-width: 767.9px)"
+            media="(max-width: 767.98px)"
           >
           <source
             srcset="<?php echo esc_url(get_theme_file_uri("images/fv-404_sp.jpg")); ?>"
-            media="(max-width: 767.9px)"
+            media="(max-width: 767.98px)"
           >
           <source
             srcset="<?php echo esc_url(get_theme_file_uri('images/fv-404.webp')); ?>"
