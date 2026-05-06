@@ -453,7 +453,7 @@
               <li class="p-posts__item js-inview">
                 <a href="<?php esc_url(the_permalink()); ?>" class="p-posts__link">
                   <div class="p-posts__header">
-                    <time class="p-posts__date" datetime="2026-01-13">2026.01.13</time>
+                    <time class="p-posts__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                     <?php // カテゴリー一覧
                     $categories = get_the_category();
                     if (!empty($categories)) {
