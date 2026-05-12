@@ -404,6 +404,9 @@ span {
 .c-breadcrumb .current-item {
   color: var(--c_active);
 }
+.c-breadcrumb span {
+  font-family: var(--ff_roboto);
+}
 
 .c-breadcrumb__inner {
   display: flex;
@@ -3389,6 +3392,7 @@ span {
 .l-footer__copyright {
   display: inline-block;
   margin-top: 50px;
+  font-family: var(--ff_roboto);
   font-size: var(--fz_12);
 }
 

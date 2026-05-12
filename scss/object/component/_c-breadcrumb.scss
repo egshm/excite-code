@@ -12,6 +12,10 @@
   .current-item {
     color: var(--c_active);
   }
+
+  span {
+    font-family: var(--ff_roboto);
+  }
 }
 
 .c-breadcrumb__inner {
