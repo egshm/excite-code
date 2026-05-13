@@ -144,7 +144,7 @@
 |13|フォームの入力内容が適切に送信されること|N/A|N/A|フォームが無いため|
 |14|ハンバーガーメニューが見切れた時に縦スクロールできること|OK|2026/5/5||
 |15|ページネーションが適切に動作すること|OK|2026/5/5||
-|16|`Title`と`Meta Description`が設定されていること<br><small>※ デスクトップアプリScreamingfrogにURLを入力して確認すること</small>|NG|2026/5/5|`Meta Description`の「制作実績」という文言が不適切|
+|16|`Title`と`Meta Description`が設定されていること<br><small>※ デスクトップアプリScreamingfrogにURLを入力して確認すること</small>|OK|2026/5/13||
 |17|ファビコンが適切に表示されていること|OK|2026/5/5||
 |18|OGPが適切に設定されていること|N/A|N/A|OGPを設定していないため|
 |19|HTML/CSSでコーディングエラーが発生しないこと<br><small>※ The W3C Markup Validation Serviceを使用すること</small>|OK|2026/5/5|WordPressが自動出力するHTMLコードのエラーおよびワーニングは許容する。|
