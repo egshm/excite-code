@@ -6,9 +6,26 @@
   <div class="p-fv p-page-top__fv">
     <div class="p-fv__inner">
       <div class="p-fv__content">
-        <h1 class="p-fv__copy-wrapper">
-          <span class="p-fv__copy">あなたの</span>
-          <span class="p-fv__copy">日常が目覚める</span>
+        <h1 class="p-fv__title">
+          <span class="u-visually-hidden">あなたの日常が目覚める</span>
+          <picture>
+            <source
+              srcset="<?php echo esc_url(get_theme_file_uri("images/fv-title_sp.svg")); ?>"
+              media="(max-width: 767.98px)"
+            >
+            <source
+              srcset="<?php echo esc_url(get_theme_file_uri("images/fv-title.svg")); ?>"
+            >
+            <img
+              fetchpriority="high"
+              src="<?php echo esc_url(get_theme_file_uri("images/fv-title.svg")); ?>"
+              alt=""
+              width="140"
+              height="436"
+              decoding="async"
+              loading="eager"
+            >
+          </picture>
         </h1>
       </div>
       <div aria-hidden="true" class="swiper-container p-fv__slider" id="js-fvSlider">

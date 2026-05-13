@@ -37,9 +37,9 @@
 ||- Windows / Firefox|OK|2026/5/5||
 ||- Windows / Microsoft Edge|OK|2026/5/5||
 ||- Windows / Safari（Playwrightで確認）|OK|2026/5/5||
-||- iOS / Chrome|NG|2026/5/5|横向き表示のときにFVタイトルがつぶれる。|
-||- iOS / Firefox|NG|2026/5/5|横向き表示のときにFVタイトルがつぶれる。|
-||- iOS / Safari|NG|2026/5/5|横向き表示のときにFVタイトルがつぶれる。|
+||- iOS / Chrome|OK|2026/5/13||
+||- iOS / Firefox|OK|2026/5/13||
+||- iOS / Safari|OK|2026/5/13||
 ||- Android / Chrome|N/A|N/A|Android端末を入手でき次第、確認予定|
 
 ## Aboutページ
