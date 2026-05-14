@@ -2274,21 +2274,24 @@ span {
   margin-top: 0;
 }
 .p-post-news li {
+  --h_line: calc(32 / 14);
+  --h_marker: 6px;
+  --w_marker: 6px;
   position: relative;
   padding-left: 16px;
   font-size: clamp(0.875rem, 0.7557251908rem + 0.5089058524vw, 1rem);
-  line-height: 2.2857142857;
+  line-height: var(--h_line);
 }
 .p-post-news li::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: var(--w_marker);
+  height: var(--h_marker);
   background-color: currentColor;
   border-radius: 50%;
-  transform: translateY(-50%);
+  transform: translateY(calc(var(--h_line) * 1em / 2 - var(--h_marker) / 2));
 }
 
 /*----------------------------------------
