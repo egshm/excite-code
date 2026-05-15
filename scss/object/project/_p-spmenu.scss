@@ -20,6 +20,12 @@
   margin-bottom: 132px;
 }
 
+.p-spmenu__list {
+  // focus-visible時の枠線用に余白を確保
+  padding-top: 2px;
+  padding-left: 4px;
+}
+
 .p-spmenu__item + .p-spmenu__item {
   margin-top: 24px;
 }
@@ -33,4 +39,7 @@
 
 .p-spmenu__icons {
   margin-top: 50px;
+  // focus-visible時の枠線用に余白を確保
+  padding-top: 2px;
+  padding-left: 4px;
 }

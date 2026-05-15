@@ -14,6 +14,11 @@
   @include fwd.hover-opacity();
 }
 
+.c-logo__link:focus-visible {
+  border: 2px solid var(--c_focus);
+  outline: none;
+}
+
 .c-logo__img {
   display: block;
 }

@@ -101,6 +101,11 @@
     @include fwd.hover-opacity();
   }
 
+  .l-header__btn:focus-visible {
+    border: 2px solid var(--c_focus);
+    outline: none;
+  }
+
   .l-header__btn-img {
     width: 22px;
     margin-right: 10px;

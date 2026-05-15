@@ -199,8 +199,9 @@ a {
 }
 
 a:focus-visible {
-  border: 2px solid var(--c_focus);
-  outline: none;
+  border: none;
+  border-radius: 2px;
+  outline: 2px solid var(--c_focus);
 }
 
 img, svg {
@@ -244,7 +245,8 @@ button {
 
 button:focus-visible {
   border: none;
-  outline: none;
+  border-radius: 2px;
+  outline: 2px solid var(--c_focus);
 }
 
 select {
@@ -477,9 +479,6 @@ span {
   background-size: 0 1px;
   transition: background-size 0.3s;
 }
-.c-btn:focus-visible .c-btn__text {
-  background-size: 100% 1px;
-}
 @media (any-hover: hover) {
   .c-btn:hover .c-btn__text {
     background-size: 100% 1px;
@@ -492,20 +491,6 @@ span {
   border-radius: 4px;
 }
 
-.c-btn--img-left:focus-visible .c-btn__img {
-  transform: translateX(-5px);
-}
-
-.c-btn:focus-visible {
-  padding: 0.8571428571em 1.7142857143em;
-  border: 2px solid var(--c_focus) !important;
-  border-radius: 4px;
-}
-
-.c-btn:focus-visible .c-btn__img {
-  transform: translateX(5px);
-}
-
 .c-btn__img {
   width: 5px;
   transition: transform 0.3s;
@@ -515,7 +500,7 @@ span {
   font-family: var(--ff_roboto);
 }
 
-@media (any-hover: hover) { /* ホバー可能時 */
+@media (any-hover: hover) {
   .c-btn:hover .c-btn__img {
     transform: translateX(5px);
   }
@@ -537,6 +522,12 @@ span {
 
 .c-btn-contact > p {
   font-size: 0;
+}
+
+a.c-btn-contact:focus-visible {
+  border: 2px solid var(--c_btn);
+  border-radius: 4px;
+  outline: 4px solid var(--c_focus);
 }
 
 .c-btn-contact--lg {
@@ -576,14 +567,6 @@ span {
   color: var(--c_white);
 }
 
-.c-btn-contact:focus-visible .c-btn-contact__img {
-  transform: translate(5px, -50%);
-}
-
-.c-btn-contact--img-left:focus-visible .c-btn-contact__img {
-  transform: translate(-5px, -50%);
-}
-
 .c-btn-contact__btn {
   width: 100%;
   padding: 0.8571428571em;
@@ -593,6 +576,11 @@ span {
   font-weight: 500;
   line-height: 1.4285714286;
   text-transform: uppercase;
+}
+
+input.c-btn-contact__btn:focus-visible {
+  outline: 4px solid var(--c_focus);
+  border-radius: 4px;
 }
 
 .c-btn-contact__img {
@@ -777,9 +765,6 @@ span {
   height: calc(var(--h_line) * 3 + var(--gap_line) * 2);
   transition: opacity 0.3s;
 }
-.c-hamburger:focus-visible {
-  opacity: 0.7;
-}
 @media (any-hover: hover) {
   .c-hamburger:hover {
     opacity: 0.7;
@@ -928,9 +913,6 @@ span {
 .c-icons__link {
   transition: opacity 0.3s;
 }
-.c-icons__link:focus-visible {
-  opacity: 0.7;
-}
 @media (any-hover: hover) {
   .c-icons__link:hover {
     opacity: 0.7;
@@ -954,13 +936,15 @@ span {
   transition: color 0.3s;
   transition: opacity 0.3s;
 }
-.c-logo__link:focus-visible {
-  opacity: 0.7;
-}
 @media (any-hover: hover) {
   .c-logo__link:hover {
     opacity: 0.7;
   }
+}
+
+.c-logo__link:focus-visible {
+  border: 2px solid var(--c_focus);
+  outline: none;
 }
 
 .c-logo__img {
@@ -1030,9 +1014,6 @@ span {
   font-family: var(--ff_roboto);
   transition: opacity 0.3s;
 }
-.c-menu__link:focus-visible {
-  opacity: 0.7;
-}
 @media (any-hover: hover) {
   .c-menu__link:hover {
     opacity: 0.7;
@@ -1099,9 +1080,6 @@ span {
 .c-pagination .page-numbers:not(.current) {
   transition: opacity 0.3s;
 }
-.c-pagination .page-numbers:not(.current):focus-visible {
-  opacity: 0.7;
-}
 @media (any-hover: hover) {
   .c-pagination .page-numbers:not(.current):hover {
     opacity: 0.7;
@@ -1115,9 +1093,6 @@ span {
   width: fit-content;
   background-color: transparent;
   transition: opacity 0.3s;
-}
-.c-pagination .prev:focus-visible, .c-pagination .next:focus-visible {
-  opacity: 0.7;
 }
 @media (any-hover: hover) {
   .c-pagination .prev:hover, .c-pagination .next:hover {
@@ -1949,9 +1924,6 @@ span {
   background-repeat: no-repeat;
   background-size: 0 1px;
   transition: background-size 0.3s;
-}
-.p-media__link:focus-visible .p-media__title > span {
-  background-size: 100% 1px;
 }
 @media (any-hover: hover) {
   .p-media__link:hover .p-media__title > span {
@@ -2944,9 +2916,6 @@ span {
   background-size: 0 1px;
   transition: background-size 0.3s;
 }
-.p-posts__link:focus-visible .p-posts__title {
-  background-size: 100% 1px;
-}
 @media (any-hover: hover) {
   .p-posts__link:hover .p-posts__title {
     background-size: 100% 1px;
@@ -3052,6 +3021,11 @@ span {
   margin-bottom: 132px;
 }
 
+.p-spmenu__list {
+  padding-top: 2px;
+  padding-left: 4px;
+}
+
 .p-spmenu__item + .p-spmenu__item {
   margin-top: 24px;
 }
@@ -3062,9 +3036,6 @@ span {
   text-transform: uppercase;
   transition: opacity 0.3s;
 }
-.p-spmenu__link:focus-visible {
-  opacity: 0.7;
-}
 @media (any-hover: hover) {
   .p-spmenu__link:hover {
     opacity: 0.7;
@@ -3073,6 +3044,8 @@ span {
 
 .p-spmenu__icons {
   margin-top: 50px;
+  padding-top: 2px;
+  padding-left: 4px;
 }
 
 /*----------------------------------------
@@ -3104,9 +3077,6 @@ span {
   font-size: clamp(0.75rem, 0.5114503817rem + 1.0178117048vw, 1rem);
   line-height: 1.4166666667;
   transition: opacity 0.3s;
-}
-.p-summary__link:focus-visible {
-  opacity: 0.7;
 }
 @media (any-hover: hover) {
   .p-summary__link:hover {
@@ -3292,9 +3262,6 @@ span {
     text-transform: uppercase;
     transition: opacity 0.3s;
   }
-  .l-header__btn:focus-visible {
-    opacity: 0.7;
-  }
 }
 @media (min-width: 768px) and (any-hover: hover) {
   .l-header__btn:hover {
@@ -3302,6 +3269,10 @@ span {
   }
 }
 @media (min-width: 768px) {
+  .l-header__btn:focus-visible {
+    border: 2px solid var(--c_focus);
+    outline: none;
+  }
   .l-header__btn-img {
     width: 22px;
     margin-right: 10px;
@@ -3375,9 +3346,6 @@ span {
 .l-footer__link {
   font-family: var(--ff_roboto);
   transition: opacity 0.3s;
-}
-.l-footer__link:focus-visible {
-  opacity: 0.7;
 }
 @media (any-hover: hover) {
   .l-footer__link:hover {
@@ -3480,9 +3448,6 @@ span {
   background-repeat: no-repeat;
   background-size: 0 1px;
   transition: background-size 0.3s;
-}
-.l-aside__link:focus-visible .l-aside__text {
-  background-size: 100% 1px;
 }
 @media (any-hover: hover) {
   .l-aside__link:hover .l-aside__text {

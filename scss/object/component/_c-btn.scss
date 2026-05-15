@@ -23,20 +23,6 @@
   border-radius: 4px;
 }
 
-.c-btn--img-left:focus-visible .c-btn__img {
-  transform: translateX(-5px);
-}
-
-.c-btn:focus-visible {
-  padding: calc((12 / 14) * 1em) calc((24 / 14) * 1em);
-  border: 2px solid var(--c_focus) !important;
-  border-radius: 4px; 
-}
-
-.c-btn:focus-visible .c-btn__img {
-  transform: translateX(5px);
-}
-
 .c-btn__img {
   width: 5px;
   transition: transform 0.3s;
@@ -46,7 +32,7 @@
   font-family: var(--ff_roboto);
 }
 
-@media (any-hover: hover) { /* ホバー可能時 */
+@media (any-hover: hover) {
   .c-btn:hover .c-btn__img {
     transform: translateX(5px);
   }

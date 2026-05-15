@@ -3,9 +3,6 @@
 /// 
 /// ホバー可能な要素に、透過のホバーエフェクトを適用します。
 /// 
-/// Note:
-/// - focus-visible の時も適用します。
-/// 
 /// @param {Number} $opacity - 不透明度（0~1）
 /// @param {Time} $transition-time - トランジション時間
 /// 
@@ -13,12 +10,6 @@
 
   transition: opacity $transition-time;
 
-  // フォーカス時
-  &:focus-visible {
-    opacity: $opacity;
-  }
-
-  // ホバー可能時
   @media (any-hover: hover) {
     &:hover {
       opacity: $opacity;
@@ -30,7 +21,7 @@
 ///
 /// @mixin underline-anim
 /// 
-/// 呼び出し元が hover / focus-visible 状態のときに、
+/// 呼び出し元がホバー状態のときに、
 /// ターゲット要素に下線アニメーションを適用します。
 /// 
 /// Note:
@@ -64,11 +55,6 @@
     transition: background-size $transition-time;
   }
 
-  &:focus-visible#{$combinator}#{$target} {
-    background-size: 100% $line-width;
-  }
-
-  // ホバー可能時
   @media (any-hover: hover) {
     &:hover#{$combinator}#{$target} {
       background-size: 100% $line-width;
