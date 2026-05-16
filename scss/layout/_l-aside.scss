@@ -39,6 +39,10 @@
   @include fwd.underline-anim(".l-aside__text");
 }
 
+.l-aside__link:focus-visible {
+  outline-offset: -1px;
+}
+
 @media (min-width: 768px) {
   .l-aside__title,
   .l-aside__link {

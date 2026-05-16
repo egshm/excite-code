@@ -62,6 +62,8 @@
 
 .p-contact__btn:focus-visible {
   color: var(--c_hover);
+  border-radius: 4px;
+  outline-offset: -1px;
 }
 
 .p-contact__btn::after {

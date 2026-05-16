@@ -15,8 +15,7 @@
 }
 
 .c-logo__link:focus-visible {
-  border: 2px solid var(--c_focus);
-  outline: none;
+  outline-offset: -2px;
 }
 
 .c-logo__img {

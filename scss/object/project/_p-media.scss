@@ -17,6 +17,10 @@
   @include fwd.underline-anim(".p-media__title > span");
 }
 
+.p-media__link:focus-visible {
+  outline-offset: -1px;
+}
+
 .p-media__img-wrap {
   width: calc((120 / 295) * 100%);
   aspect-ratio: 120 / 95;

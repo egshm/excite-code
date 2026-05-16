@@ -31,6 +31,10 @@
     @include fwd.hover-opacity();
   }
 
+  .page-numbers:focus-visible {
+    outline-offset: -1px;
+  }
+
   .page-numbers.current {
     color: var(--c_white);
     background-color: var(--c_bg-current);

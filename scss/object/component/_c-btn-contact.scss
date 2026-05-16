@@ -18,9 +18,9 @@
 
 // Completeページの「TOPへ戻る」ボタンのフォーカス時スタイル
 a.c-btn-contact:focus-visible {
-  border: 2px solid var(--c_btn);
   border-radius: 4px;
   outline: 4px solid var(--c_focus);
+  outline-offset: -2px;
 }
 
 .c-btn-contact--lg {
